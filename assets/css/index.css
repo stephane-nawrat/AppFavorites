@@ -1,0 +1,10 @@
+/* === index.css === */
+
+/* Main */
+main {
+  flex: 1;
+  background: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

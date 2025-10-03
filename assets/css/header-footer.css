@@ -1,0 +1,19 @@
+/* === header-footer.css === */
+
+/* Header */
+header {
+  padding: 2rem;
+  text-align: center;
+  background: #222;   
+  color: #fff;        
+  flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+  padding: 3rem;
+  text-align: center;
+  background: #444;   
+  color: #eee;        
+  flex-shrink: 0;
+}
