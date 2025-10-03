@@ -1,6 +1,12 @@
 # macOS
 .DS_Store
 
+# git
+.git 
+
 # Autres fichiers temporaires
 *.log
 *.tmp
+
+# IMG TEMPORAIRE
+asssets/img/
