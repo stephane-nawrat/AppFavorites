@@ -1,1 +1,0 @@
-# AppFavorites local test
