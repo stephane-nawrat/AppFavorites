@@ -9,38 +9,61 @@ main {
   align-items: center;
 }
 
-/* === index.css === */
-
-/* Conteneur des cartes en ligne avec espace */
+/* Conteneur principal des cartes */
 .cards-container {
   display: flex;
-  justify-content: space-around; /* espace égal entre les cartes */
-  align-items: stretch;
-  gap: 2rem; /* espace entre cartes */
-  width: 100%;
-  padding: 2rem;
-  flex-wrap: wrap; /* responsive : cartes passent en ligne suivante si écran trop petit */
+  flex-direction: column; /* Mobile d'abord = colonne */
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 /* Carte individuelle */
 .card {
-  background-color: #838383;
+  background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  flex: 1 1 200px; /* largeur flexible minimum 200px */
-  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center; /* Titre, image et texte centrés */
   transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image placeholder */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Titre de la carte */
+.card h2 {
+  margin: 1rem 0 0.5rem; /* espace autour */
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Texte descriptif */
+.card p {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 /* Effet hover */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* Titres des cartes */
-.card h2 {
-  margin-bottom: 1rem;
+/* Responsive : affichage en ligne à partir de 768px */
+@media (min-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
 }
