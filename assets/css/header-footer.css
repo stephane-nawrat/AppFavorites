@@ -1,13 +1,57 @@
 /* === header-footer.css === */
 
-/* Header */
+/* Header général */
 header {
-  padding: 2rem;
-  text-align: center;
-  background: #222;   
-  color: #fff;        
-  flex-shrink: 0;
+  padding: 1.5rem 4rem;
+  background: #222;        /* fond sombre */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à gauche, nav à droite */
+  flex-wrap: wrap; /* mobile-first : permet à la nav de passer à la ligne si écran petit */
 }
+
+/* Logo */
+header .logo h1 {
+  color: rgb(142, 142, 142);  
+  display: block;
+}
+
+/* Navigation */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;      /* espace entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens de navigation */
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover sur liens */
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive simple : nav sous logo sur petit écran */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
 
 /* Footer */
 footer {
