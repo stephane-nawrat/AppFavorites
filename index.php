@@ -4,7 +4,23 @@ include 'partials/header.php';
 ?>
 
 <main>
-  <p>Page d'accueil</p>
+  <main>
+  <div class="cards-container">
+    <div class="card">
+      <h2>Carte 1</h2>
+      <p>Description de la carte 1</p>
+    </div>
+    <div class="card">
+      <h2>Carte 2</h2>
+      <p>Description de la carte 2</p>
+    </div>
+    <div class="card">
+      <h2>Carte 3</h2>
+      <p>Description de la carte 3</p>
+    </div>
+  </div>
+</main>
+
 </main>
 
 <?php

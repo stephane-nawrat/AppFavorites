@@ -8,3 +8,39 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/* === index.css === */
+
+/* Conteneur des cartes en ligne avec espace */
+.cards-container {
+  display: flex;
+  justify-content: space-around; /* espace égal entre les cartes */
+  align-items: stretch;
+  gap: 2rem; /* espace entre cartes */
+  width: 100%;
+  padding: 2rem;
+  flex-wrap: wrap; /* responsive : cartes passent en ligne suivante si écran trop petit */
+}
+
+/* Carte individuelle */
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  flex: 1 1 200px; /* largeur flexible minimum 200px */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Titres des cartes */
+.card h2 {
+  margin-bottom: 1rem;
+}
